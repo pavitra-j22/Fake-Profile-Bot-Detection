@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 
-const API = "https://fake-profile-bot-detection.onrender.com/api";
+const API = import.meta.env.VITE_API_URL || "/api";
 
 const blank = {
   username: "",

@@ -24,23 +24,28 @@ CREATE DATABASE socialshield;
 
 Edit `backend/src/main/resources/application.properties` and set your MySQL password.
 
-### Backend
+### Backend (serves the frontend too)
 ```powershell
 cd backend
 mvn spring-boot:run
 ```
 Runs on http://localhost:8080
 
+The built React frontend is bundled into `backend/src/main/resources/static/`,
+so the app is served directly at http://localhost:8080 — no Whitelabel/404.
+
 Health: http://localhost:8080/api/health
 
-### Frontend
+### Frontend (development only)
 Open a second terminal:
 ```powershell
 cd frontend
 npm install
-npm run dev
+npm run build   # bundles the app into backend/src/main/resources/static
+npm run dev     # hot-reload dev server on http://localhost:5173, /api proxied to :8080
 ```
-Runs on http://localhost:5173
+
+Deployed app: https://fake-profile-bot-detection.onrender.com
 
 ## Main APIs
 POST /api/profiles
