@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 
-const API = "https://socialshield-backend.onrender.com/api";
+const API = "https://fake-profile-bot-detection.onrender.com/api";
 
 const blank = {
   username: "",
