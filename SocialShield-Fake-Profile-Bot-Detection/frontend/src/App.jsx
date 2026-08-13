@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 
-const API = "http://localhost:8080/api";
+const API = "https://socialshield-backend.onrender.com/api";
 
 const blank = {
   username: "",
